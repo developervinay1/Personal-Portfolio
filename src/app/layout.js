@@ -1,8 +1,8 @@
 import { ThemeProvider } from "@/components/ThemeProvider";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Jost } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const jost = Jost({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",
@@ -12,8 +12,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={jost.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <div className="bg-red-200 dark:bg-red-500 absolute top-[6rem] right-[4rem] h-[14.25rem] w-[14.25rem] rounded-full blur-[10rem] sm:w-[68.75rem]"></div>
+          <div className="bg-blue-200 dark:bg-blue-500 absolute top-[6rem] left-[3rem] h-[14.25rem] w-[14.25rem] rounded-full blur-[10rem] sm:w-[68.75rem]"></div>
           {children}
         </ThemeProvider>
       </body>
