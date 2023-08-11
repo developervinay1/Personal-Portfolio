@@ -6,7 +6,7 @@ export default function AboutSection() {
       <h2 className="text-4xl text-center font-bold dark:text-white">
         About Me
       </h2>
-      <p className="max-w-2xl m-auto mt-10 text-xl leading-9 text-justify">
+      <p className="max-w-2xl m-auto mt-10 text-lg leading-9 text-justify">
         I'm Vinaypartap Singh, a skilled web developer with expertise spanning
         HTML, CSS, JavaScript, React.js, Node.js, Express.js, and MongoDB. I've
         delved into the e-commerce sphere, mastering Shopify, Liquid, and
