@@ -1,10 +1,36 @@
+"use client";
+
 import React from "react";
 import { HeroImage } from "./IntroImage";
 import { Button } from "../ui/button";
 import { Download, Github, Linkedin } from "lucide-react/dist/esm/icons";
 import { MobileIcon } from "@radix-ui/react-icons";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "../ui/tooltip";
 
 export default function IntroSection() {
+  const contactOptions = [
+    {
+      tooltipTitle: "Connect On A Call",
+      Icon: MobileIcon,
+    },
+    {
+      tooltipTitle: "Download Resume",
+      Icon: Download,
+    },
+    {
+      tooltipTitle: "Github Profile",
+      Icon: Github,
+    },
+    {
+      tooltipTitle: "LinkedIn Profile",
+      Icon: Linkedin,
+    },
+  ];
   return (
     <div className="flex justify-center flex-col items-center mt-40">
       <HeroImage />
@@ -15,10 +41,24 @@ export default function IntroSection() {
         is <span className="underline">React(Next js)</span>
       </h2>
       <div className="mt-10 space-x-6">
-        <Button variant="outline" size="icon">
-          <MobileIcon className="h-4 w-4" />
-        </Button>
-        <Button variant="outline" size="icon">
+        {contactOptions.map(({ tooltipTitle, Icon }) => {
+          return (
+            <TooltipProvider key={Icon}>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Button variant="outline" size="icon">
+                    <Icon className="h-4 w-4" />
+                  </Button>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>{tooltipTitle}</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+          );
+        })}
+
+        {/* <Button variant="outline" size="icon">
           <Download className="h-4 w-4" />
         </Button>
         <Button variant="outline" size="icon">
@@ -26,7 +66,7 @@ export default function IntroSection() {
         </Button>
         <Button variant="outline" size="icon">
           <Linkedin className="h-4 w-4" />
-        </Button>
+        </Button> */}
       </div>
     </div>
   );
