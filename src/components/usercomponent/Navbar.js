@@ -40,81 +40,83 @@ const components = [
 
 export function Navbar() {
   return (
-    <div className="flex justify-between items-center min-h-[90px] max-w-7xl m-auto">
-      <div>
-        <h1 className="font-bold">vsandhu.dev</h1>
-      </div>
-      <NavigationMenu>
-        <NavigationMenuList>
-          <Link
-            href="/"
-            legacyBehavior
-            passHref
-            style={{ backgroundColor: "transparent" }}
-          >
-            <NavigationMenuLink
-              className={navigationMenuTriggerStyle()}
+    <div className="fixed top-0 w-full left-0">
+      <div className="flex justify-between items-center min-h-[90px] max-w-7xl m-auto">
+        <div>
+          <h1 className="font-bold">vsandhu.dev</h1>
+        </div>
+        <NavigationMenu>
+          <NavigationMenuList>
+            <Link
+              href="/"
+              legacyBehavior
+              passHref
               style={{ backgroundColor: "transparent" }}
             >
-              Home
-            </NavigationMenuLink>
-          </Link>
-          <Link
-            href="#about"
-            legacyBehavior
-            passHref
-            style={{ backgroundColor: "transparent" }}
-          >
-            <NavigationMenuLink
-              className={navigationMenuTriggerStyle()}
-              style={{ backgroundColor: "transparent" }}
-            >
-              About
-            </NavigationMenuLink>
-          </Link>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger style={{ backgroundColor: "transparent" }}>
-              Projects
-            </NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                {components.map((component) => (
-                  <ListItem
-                    key={component.title}
-                    title={component.title}
-                    href={component.href}
-                  >
-                    {component.description}
-                  </ListItem>
-                ))}
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <Link href="/docs" legacyBehavior passHref>
               <NavigationMenuLink
                 className={navigationMenuTriggerStyle()}
                 style={{ backgroundColor: "transparent" }}
               >
-                Skills
+                Home
               </NavigationMenuLink>
             </Link>
-            <Link href="/docs" legacyBehavior passHref>
+            <Link
+              href="#about"
+              legacyBehavior
+              passHref
+              style={{ backgroundColor: "transparent" }}
+            >
               <NavigationMenuLink
                 className={navigationMenuTriggerStyle()}
                 style={{ backgroundColor: "transparent" }}
               >
-                Education
+                About
               </NavigationMenuLink>
             </Link>
-          </NavigationMenuItem>
-        </NavigationMenuList>
-      </NavigationMenu>
-      <div className="space-x-4 flex items-center">
-        <Button variant="outline" size="icon">
-          <PhoneCall className="h-4 w-4" />
-        </Button>
-        <ModeToggle />
+            <NavigationMenuItem>
+              <NavigationMenuTrigger style={{ backgroundColor: "transparent" }}>
+                Projects
+              </NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                  {components.map((component) => (
+                    <ListItem
+                      key={component.title}
+                      title={component.title}
+                      href={component.href}
+                    >
+                      {component.description}
+                    </ListItem>
+                  ))}
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Link href="/docs" legacyBehavior passHref>
+                <NavigationMenuLink
+                  className={navigationMenuTriggerStyle()}
+                  style={{ backgroundColor: "transparent" }}
+                >
+                  Skills
+                </NavigationMenuLink>
+              </Link>
+              <Link href="/docs" legacyBehavior passHref>
+                <NavigationMenuLink
+                  className={navigationMenuTriggerStyle()}
+                  style={{ backgroundColor: "transparent" }}
+                >
+                  Education
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+          </NavigationMenuList>
+        </NavigationMenu>
+        <div className="space-x-4 flex items-center">
+          <Button variant="outline" size="icon">
+            <PhoneCall className="h-4 w-4" />
+          </Button>
+          <ModeToggle />
+        </div>
       </div>
     </div>
   );
