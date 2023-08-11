@@ -40,7 +40,7 @@ const components = [
 
 export function Navbar() {
   return (
-    <div className="fixed top-0 w-full left-0 bg-white z-10">
+    <div>
       <div className="flex justify-between items-center min-h-[90px] max-w-7xl m-auto">
         <div>
           <h1 className="font-bold">vsandhu.dev</h1>

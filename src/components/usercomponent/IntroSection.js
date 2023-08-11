@@ -32,7 +32,7 @@ export default function IntroSection() {
     },
   ];
   return (
-    <div className="flex justify-center flex-col items-center mt-40 min-h-[70vh]">
+    <div className="flex justify-center flex-col items-center mt-40 min-h-[50vh]">
       <HeroImage />
       <h2 className="text-black text-4xl text-center max-w-2xl leading-normal mt-10 dark:text-white">
         <span className="font-bold">Hi, I am Vinay</span>. I'm a{" "}
