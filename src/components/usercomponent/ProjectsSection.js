@@ -102,7 +102,7 @@ export default function ProjectsSection() {
         return (
           <section className="text-gray-600 body-font mt-24" key={data.id}>
             <div
-              className={`container mx-auto flex py-10 ${flexDirection} items-center projectSection bg-red-100/20`}
+              className={`container mx-auto flex ${flexDirection} items-center projectSection`}
             >
               <div
                 className={`lg:flex-grow md:w-1/2 ${padding}  flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center`}

@@ -3,7 +3,7 @@ import Timeline from "./Timeline";
 
 export default function AboutSection() {
   return (
-    <div className="py-10 min-h-[100vh] mt-60" id="about">
+    <div className="py-10 min-h-[60vh] mt-60" id="about">
       <h2 className="text-4xl text-center font-bold dark:text-white">
         About Me
       </h2>

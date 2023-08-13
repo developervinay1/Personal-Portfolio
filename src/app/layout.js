@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <body className={jost.className}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <div className="z-[-1] bg-red-200 dark:bg-red-900 fixed top-[6rem] dark:top-[24rem] right-[4rem] h-[14.25rem] w-[14.25rem] rounded-full blur-[10rem] sm:w-[68.75rem]"></div>
           <div className="z-[-1] bg-blue-200 dark:bg-blue-900 fixed top-[6rem] left-[3rem] h-[14.25rem] w-[14.25rem] rounded-full blur-[10rem] sm:w-[68.75rem]"></div>
           {children}
